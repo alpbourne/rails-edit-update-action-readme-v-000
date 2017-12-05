@@ -638,3 +638,6 @@ Started GET "/posts/3" for 71.58.199.149 at 2017-12-05 16:53:38 +0000
 Cannot render console from 71.58.199.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms)
