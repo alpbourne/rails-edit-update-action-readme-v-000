@@ -602,3 +602,39 @@ Processing by PostsController#create as HTML
   [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
 Redirected to http://174.138.35.100:55824/posts/3
 Completed 302 Found in 27ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/posts/3" for 71.58.199.149 at 2017-12-05 16:53:27 +0000
+Cannot render console from 71.58.199.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 48ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/3/edit" for 71.58.199.149 at 2017-12-05 16:53:33 +0000
+Cannot render console from 71.58.199.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/posts/3" for 71.58.199.149 at 2017-12-05 16:53:38 +0000
+Cannot render console from 71.58.199.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HwfgQDZeK650TH7auvD3YgQ2KjwxB0TxCtHQE8Ts/f3yIQQPHaqEfzkUdKwfHZp4Zad1sTD7w/JjfkWSNryU1w==", "title"=>"Lala", "description"=>"I went on a bike ride.", "commit"=>"Submit Post", "id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "I went on a bike ride."], ["updated_at", "2017-12-05 16:53:38.418143"], ["id", 3]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://174.138.35.100:55824/posts/3
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/3" for 71.58.199.149 at 2017-12-05 16:53:38 +0000
+Cannot render console from 71.58.199.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
